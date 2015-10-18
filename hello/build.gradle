@@ -1,0 +1,19 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "com.palantir.java-distribution"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':hello-api')
+
+    compile "io.dropwizard:dropwizard-core:${dropwizardVersion}"
+}
+
+distribution {
+    serviceName 'hello-world'
+    mainClass 'com.joe.hello.HelloWorld'
+    args 'server', 'var/conf/hello.yml'
+}

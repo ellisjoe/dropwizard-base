@@ -1,0 +1,4 @@
+rootProject.name = 'hello-world'
+
+include 'hello'
+include 'hello-api'
