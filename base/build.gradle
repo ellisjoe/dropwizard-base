@@ -7,13 +7,13 @@ repositories {
 }
 
 dependencies {
-    compile project(':hello-api')
+    compile project(':base-api')
 
     compile "io.dropwizard:dropwizard-core:${dropwizardVersion}"
 }
 
 distribution {
-    serviceName 'hello-world'
-    mainClass 'com.joe.hello.HelloWorld'
-    args 'server', 'var/conf/hello.yml'
+    serviceName 'base'
+    mainClass 'org.base.BaseServer'
+    args 'server', 'var/conf/base.yml'
 }

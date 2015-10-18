@@ -1,4 +1,4 @@
-rootProject.name = 'hello-world'
+rootProject.name = 'base-proj'
 
-include 'hello'
-include 'hello-api'
+include 'base'
+include 'base-api'

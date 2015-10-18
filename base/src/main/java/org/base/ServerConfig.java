@@ -1,4 +1,4 @@
-package com.joe.hello;
+package org.base;
 
 import io.dropwizard.Configuration;
 
