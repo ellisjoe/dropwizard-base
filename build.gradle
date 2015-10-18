@@ -9,3 +9,7 @@ buildscript {
         classpath "gradle.plugin.com.palantir.gradle.javadist:gradle-java-distribution:${javaDistributionVersion}"
     }
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.7'
+}
