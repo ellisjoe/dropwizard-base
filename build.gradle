@@ -1,13 +1,31 @@
 buildscript {
     repositories {
+        jcenter()
         maven {
-            url "https://plugins.gradle.org/m2/"
+            url "http://dl.bintray.com/palantir/releases"
         }
     }
 
     dependencies {
-        classpath "gradle.plugin.com.palantir.gradle.javadist:gradle-java-distribution:${javaDistributionVersion}"
+        classpath "com.palantir.gradle.javadist:gradle-java-distribution:${javaDistributionVersion}"
+        classpath "com.palantir:gradle-baseline-java:${baselineVersion}"
     }
+}
+
+repositories {
+    jcenter()
+}
+
+
+// Apply for baselineUpdateConfig task
+apply plugin: 'com.palantir.baseline-config'
+
+subprojects {
+    // Apply plugins selectively depending on required functionality.
+    apply plugin: 'com.palantir.baseline-checkstyle'
+    apply plugin: 'com.palantir.baseline-eclipse'
+    apply plugin: 'com.palantir.baseline-findbugs'
+    apply plugin: 'com.palantir.baseline-idea'
 }
 
 task wrapper(type: Wrapper) {

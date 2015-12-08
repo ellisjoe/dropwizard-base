@@ -3,3 +3,8 @@
 .project
 .settings
 build/
+
+# idea project files
+*.iml
+*.ipr
+*.iws
