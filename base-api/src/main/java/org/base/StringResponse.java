@@ -1,15 +1,20 @@
 package org.base;
 
-public class StringResponse {
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.immutables.value.Value;
 
-    private final String response;
+@Value.Immutable
+@Value.Style(visibility = Value.Style.ImplementationVisibility.PACKAGE)
+@JsonSerialize(as = ImmutableStringResponse.class)
+@JsonDeserialize(as = ImmutableStringResponse.class)
+public abstract class StringResponse {
 
-    public StringResponse(String response) {
-        this.response = response;
-    }
+    @Value.Parameter
+    public abstract String getResponse();
 
-    public String getResponse() {
-        return response;
+    public static StringResponse of(String response) {
+        return ImmutableStringResponse.of(response);
     }
 
 }

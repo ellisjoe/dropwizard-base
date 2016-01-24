@@ -3,6 +3,7 @@
 .project
 .settings
 build/
+generated_src
 
 # idea project files
 *.iml
