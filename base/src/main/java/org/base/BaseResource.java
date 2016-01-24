@@ -6,4 +6,9 @@ public class BaseResource implements BaseService {
         return StringResponse.of("Success!");
     }
 
+    @Override
+    public StringResponse testInt(Integer val) {
+        return StringResponse.of(val.toString());
+    }
+
 }
