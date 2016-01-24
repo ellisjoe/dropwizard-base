@@ -2,7 +2,7 @@ buildscript {
     repositories {
         jcenter()
         maven {
-            url "http://dl.bintray.com/palantir/releases"
+            url "https://plugins.gradle.org/m2/"
         }
     }
 
