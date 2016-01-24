@@ -7,8 +7,8 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.palantir.gradle.javadist:gradle-java-distribution:${javaDistributionVersion}"
-        classpath "com.palantir:gradle-baseline-java:${baselineVersion}"
+        classpath "gradle.plugin.com.palantir.gradle.javadist:gradle-java-distribution:${javaDistributionVersion}"
+        classpath "gradle.plugin.com.palantir:gradle-baseline-java:${baselineVersion}"
     }
 }
 
