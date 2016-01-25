@@ -9,6 +9,7 @@ dependencies {
     compile project(':base-api')
 
     compile "io.dropwizard:dropwizard-core:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-assets:${dropwizardVersion}"
 }
 
 distribution {

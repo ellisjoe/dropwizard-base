@@ -1,21 +1,13 @@
 server:
-  adminMinThreads: 1
-  adminMaxThreads: 64
-  adminContextPath: /
+  type: default
+  rootPath: /api/
+
   applicationContextPath: /
   applicationConnectors:
     - type: http
       port: 8080
-    #- type: https
-    #  port: 8443
-    #  keyStorePath: example.keystore
-    #  keyStorePassword: example
-    #  validateCerts: false
+
+  adminContextPath: /
   adminConnectors:
     - type: http
       port: 8081
-    #- type: https
-    #  port: 8444
-    #  keyStorePath: example.keystore
-    #  keyStorePassword: example
-    #  validateCerts: false
